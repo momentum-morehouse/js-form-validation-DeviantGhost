@@ -1,6 +1,6 @@
 # Validating a Form
 
-## Directions
+<!-- ## Directions
 
 Look at `form.html`. It contains a form for pre-paid parking. It includes some styling already done for you in `style.css`.
 
@@ -8,7 +8,7 @@ You will edit this HTML and write JavaScript to validate this form. When the "Ma
 
 Do this project in steps. Each step adds another layer of difficulty. Make sure and commit your code after each step, if not more often. Do not worry if you cannot complete all the steps!
 
-<!-- ### Step 0
+### Step 0
 
 Read [Client-side form validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation) up through the section titled "A more detailed example" under "Validating forms using JavaScript".
 
@@ -37,9 +37,9 @@ The cost is $5 per day.
 
 ### Step 5
 
-The requirements have changed for calculating cost. The new cost is $5 per weekday, and $7 per weekend day. `.map` and `.reduce` will be very helpful in calculating the total cost, as will [the JavaScript Date object](https://css-tricks.com/everything-you-need-to-know-about-date-in-javascript/).
+The requirements have changed for calculating cost. The new cost is $5 per weekday, and $7 per weekend day. `.map` and `.reduce` will be very helpful in calculating the total cost, as will [the JavaScript Date object](https://css-tricks.com/everything-you-need-to-know-about-date-in-javascript/). -->
 
-### Step 6
+<!-- ### Step 6
 
 Validate the format of the credit card number. The following code will let you know if it is valid:
 
@@ -77,8 +77,8 @@ If the credit card number is invalid, an error message should appear that looks 
 Add the following validations:
 
 * Expiration date must be a valid month and year and in the correct format.
-* Expiration date must not be in the past.
-* Car year cannot be in the future.
-* Date parking must be in the future.
+<!-- * Expiration date must not be in the past. -->
+<!-- * Car year cannot be in the future. -->
+<!-- * Date parking must be in the future. -->
 
 Each of these should also have client side validation errors.

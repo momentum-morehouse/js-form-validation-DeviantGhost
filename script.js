@@ -16,32 +16,34 @@ form.addEventListener("submit", function(event){
     let expireDate = new Date(expiration.value);
     let currentDate = new Date();
 
-    let parkingYear = parkingDate.getYear();
+    let parkingYear = parkingDate.getFullYear();
     let parkingDayOfWeek = parkingDate.getDay();
     let parkingMonth = parkingDate.getMonth();
     let parkingDay = parkingDate.getDay();
     let expireMonth = expireDate.getMonth();
-    let expireYear = expireDate.getYear();
+    let expireYear = expireDate.getFullYear();
     
 
-    if(!isNaN(Number(carYear.value)) && 
-       Number(carYear.value) > 1900  &&
-       Number(carYear.value) < currentDate.getYear()){
+    if((carYear.value > 1900) && (carYear.value < currentDate.getFullYear())){
 
         console.log("valid");
-        console.log("Is it a number: " + !isNaN(Number(carYear.value)));
-        console.log("Higher than 1900: " + (Number(carYear.value) > 1900));
-        console.log("Lower than current date: " + Number(carYear.value) < currentDate.getYear());
-        console.log("Value: " + Number(carYear.value));
+        console.log("Higher than 1900: " + (carYear.value > 1900));
+        console.log("Lower than current date: " + (carYear.value < currentDate.getFullYear()));
+        let statementValue = (parseInt(carYear.value) > 1900)  && (parseInt(carYear.value) < currentDate.getFullYear());
+        console.log("Value of if statement: " + statementValue);
+        console.log("Value: " + carYear.value);
+        console.log("Current Year: " + currentDate.getFullYear());
         
         carYear.parentElement.classList.add("input-valid");
     
     }else{
         console.log("invalid");
-        console.log("Is it a number: " + !isNaN(Number(carYear.value)));
-        console.log("Higher than 1900: " + (Number(carYear.value) > 1900));
-        console.log("Lower than current date: " + (Number(carYear.value) > 1900));
-        console.log("Value: " + Number(carYear.value));
+        console.log("Higher than 1900: " + (carYear.value > 1900));
+        console.log("Lower than current date: " + (carYear.value < currentDate.getFullYear()));
+        let statementValue = (parseInt(carYear.value) > 1900)  && (parseInt(carYear.value) < currentDate.getFullYear());
+        console.log("Value of if statement: " + statementValue);
+        console.log("Value: " + carYear.value);
+        console.log("Current Year: " + currentDate.getFullYear());
 
         carYear.parentElement.classList.add("input-invalid");
         carYear.setAttribute("title", "Not a valid car year");
@@ -56,7 +58,7 @@ form.addEventListener("submit", function(event){
         console.log(costPerDay);
 
     }else{
-        console.log("Weekday: " +parkingDayOfWeek);
+        console.log("Weekday: " + parkingDayOfWeek);
 
         costPerDay = 5;
         
@@ -80,7 +82,7 @@ form.addEventListener("submit", function(event){
 
     if(parkingDay > currentDate.getDay()     &&
        parkingMonth > currentDate.getMonth() &&
-       parkingYear > currentDate.getYear()){
+       parkingYear > currentDate.getFullYear()){
         
         time.parentElement.classList.add("input-valid");
 
@@ -103,14 +105,21 @@ form.addEventListener("submit", function(event){
 
     }
 
-    if(expireMonth < currentDate.getMonth()&& 
-       expireYear < currentDate.getYear()  &&
-       expireMonth <= 12            &&
-       expiration.value.length){
+    if(expireMonth < currentDate.getMonth()   && 
+       expireYear < currentDate.getFullYear() &&
+       expireMonth < 12                       &&
+       (!isNaN(expireYear))                   &&
+       (!isNaN(expireMonth))){
+           
         expiration.parentElement.classList.add("input-invalid");
         expiration.setAttribute("title", "Not a valid expiration date");
 
     }else{
+        console.log("Is a valid expireYear date: " + (!isNaN(expireYear)))
+        console.log("expireYear value: " + expireYear);
+        console.log("Is a valid expireMonth date: " + (!isNaN(expireMonth)));
+        console.log("expireMonth value: " + expireMonth);
+
         expiration.parentElement.classList.add("input-valid");
 
     }
