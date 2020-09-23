@@ -8,7 +8,7 @@ You will edit this HTML and write JavaScript to validate this form. When the "Ma
 
 Do this project in steps. Each step adds another layer of difficulty. Make sure and commit your code after each step, if not more often. Do not worry if you cannot complete all the steps!
 
-### Step 0
+<!-- ### Step 0
 
 Read [Client-side form validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation) up through the section titled "A more detailed example" under "Validating forms using JavaScript".
 
@@ -70,7 +70,7 @@ function luhnCheck(val) {
 
 This code only works with 16 digit card numbers. "4111111111111111" is a valid card number you can use for testing purposes.
 
-If the credit card number is invalid, an error message should appear that looks like the rest of the built-in client side validations.
+If the credit card number is invalid, an error message should appear that looks like the rest of the built-in client side validations. -->
 
 ### Step 7
 

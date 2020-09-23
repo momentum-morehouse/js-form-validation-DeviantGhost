@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <title>Form Validation</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+    <link rel="stylesheet" href="https://cdn.shoelace.style/1.0.0-beta24/shoelace.css">
   </head>
   <body>
     <div class="container">
@@ -37,7 +40,8 @@
           <div class="col">
             <div class="input-field" id="cvv-field">
               <label for="cvv">CVV</label>
-              <input id="cvv" type="text">
+              <input id="cvv" type="text" pattern="(?=.*\d).{3,}" 
+              title= "CVV must be a three-digit number.">
             </div>
           </div>
           <div class="col">
