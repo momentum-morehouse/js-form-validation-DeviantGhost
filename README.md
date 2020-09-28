@@ -1,6 +1,6 @@
 # Validating a Form
 
-## Directions
+<!-- ## Directions
 
 Look at `form.html`. It contains a form for pre-paid parking. It includes some styling already done for you in `style.css`.
 
@@ -37,9 +37,9 @@ The cost is $5 per day.
 
 ### Step 5
 
-The requirements have changed for calculating cost. The new cost is $5 per weekday, and $7 per weekend day. `.map` and `.reduce` will be very helpful in calculating the total cost, as will [the JavaScript Date object](https://css-tricks.com/everything-you-need-to-know-about-date-in-javascript/).
+The requirements have changed for calculating cost. The new cost is $5 per weekday, and $7 per weekend day. `.map` and `.reduce` will be very helpful in calculating the total cost, as will [the JavaScript Date object](https://css-tricks.com/everything-you-need-to-know-about-date-in-javascript/). -->
 
-### Step 6
+<!-- ### Step 6
 
 Validate the format of the credit card number. The following code will let you know if it is valid:
 
@@ -70,15 +70,15 @@ function luhnCheck(val) {
 
 This code only works with 16 digit card numbers. "4111111111111111" is a valid card number you can use for testing purposes.
 
-If the credit card number is invalid, an error message should appear that looks like the rest of the built-in client side validations.
+If the credit card number is invalid, an error message should appear that looks like the rest of the built-in client side validations. -->
 
 ### Step 7
 
 Add the following validations:
 
 * Expiration date must be a valid month and year and in the correct format.
-* Expiration date must not be in the past.
-* Car year cannot be in the future.
-* Date parking must be in the future.
+<!-- * Expiration date must not be in the past. -->
+<!-- * Car year cannot be in the future. -->
+<!-- * Date parking must be in the future. -->
 
 Each of these should also have client side validation errors.
